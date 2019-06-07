@@ -1,0 +1,92 @@
+Usuario{
+	nombre: string,
+    	apellido: string,
+    	nombreUsuario: string,
+    	contrasenia: string,
+	telefono: int,
+	email: string,
+	domicilio: [Domicilio],
+    	tipoUsuario: TipoUsuario,	
+}
+
+TipoUsuario{
+    	codigoUsuario: int,
+    	tiposUsuario: string
+}
+	
+Domicilio{
+	aliasDomicilio, string,
+    	calle: string,
+    	numero: int,
+    	localidad: Localidad
+}
+	
+Localidad{
+	nombreLocalidad: string,
+	departamento: Departamento
+}
+	  
+Departamento{
+	nombreDepartamento: string,
+}
+	
+Pedido{
+    	fechaPedido: Date,
+    	numeroPedido: int, autoincremental,
+    	estadoPedido: EstadoPedido,
+    	horaEstimadaFin: Date,
+    	tipoEnvio: TipoEnvio,
+    	cliente: Usuario,
+    	articulosManufacturados: [ArticuloManufacturado],
+    	articulos: [Articulo],
+    	subtotal: double   
+}
+	
+EstadoPedido{
+	estadoPedido: String
+}
+	
+TipoEnvio{
+	tipoEnvio: String
+}
+	
+Articulo{
+		codigoArticulo: string,
+    	denominacionArticulo: string,
+    	precioCompraArticulo: double,
+    	precioVentaArticulo: double,
+    	stockActual: double,
+    	unidadMedida: UnidadaMedida,
+    	esInsumo: boolean,
+    	rubro: Rubro
+}
+	
+UnidadMedida{
+	unidadMedida: string
+}
+	
+Rubro{
+	rubro: string
+}
+	
+ArticuloManufacturado{
+    	denominacionArticuloManufacturado: string,
+	precioVentaArticuloManufacturado: double,
+    	tiempoEstimadoCocina: int,
+    	ingredientes: [Ingrediente],
+    	precioVenta: double,
+    	rubro: Rubro
+}
+	
+Ingrediente{
+    	articulo: Articulo,
+    	cantidad: double 
+}
+	
+Factura{
+    	fechaFactura: Date,
+    	numeroFactura: int, autoincremental,
+    	pedido: Pedido,
+    	montoDescuento: double,
+    	totalFactura: double
+}

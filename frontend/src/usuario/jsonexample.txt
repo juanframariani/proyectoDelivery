@@ -1,0 +1,20 @@
+{ 
+    "_id" : ObjectId("5cd20e0449c8c32d40b113f3"), 
+    "tipoUsuario" : { 
+            "codigo" : 1, 
+            "tipo" : "cliente" 
+        }, 
+    "estaActivo" : true, 
+    "nombre" : "prueba", 
+    "apellido" : "prueba", 
+    "telefono" : "prueba", 
+    "email" : "prueba", 
+    "nombreUsuario" : "prueba", 
+    "contrasenia" : "$2a$08$qGXsh2bTnb8aTA0drJSynelFHLY9xdtKOReFU7vTyFhpqGvgZH29C", 
+    "localidad" : "test", 
+    "calle" : "test", 
+    "numero" : "test", 
+    "createdAt" : ISODate("2019-05-07T23:00:20.102Z"), 
+    "updatedAt" : ISODate("2019-05-07T23:00:20.102Z"), 
+    "__v" : 0 
+}
